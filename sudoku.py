@@ -34,8 +34,13 @@ square_units = [cross(rs, cs) for rs in ('ABC','DEF','GHI') for cs in ('123','45
 '''
 square_units[0] = ['A1', 'A2', 'A3', 'B1', 'B2', 'B3', 'C1', 'C2', 'C3']
 '''
-
+diaginal_units = [[rows[i] + cols[i] for i in range(9)],[rows[i] + cols[8 - i] for i in range(9)]]
+'''
+[['A1', 'B2', 'C3', 'D4', 'E5', 'F6', 'G7', 'H8', 'I9'],
+ ['A9', 'B8', 'C7', 'D6', 'E5', 'F4', 'G3', 'H2', 'I1']]
+'''
 unitlist = row_units + column_units + square_units
+unitlist_dia = diaginal_units + unitlist
 
 #first version of grid, with '.' standing for empty box
 def grid_values_1(grid):
