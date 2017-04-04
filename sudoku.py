@@ -7,6 +7,7 @@ Created on Thu Mar 23 16:29:53 2017
 
 rows = 'ABCDEFGHI'
 cols = '123456789'
+kl6
 
 def cross(a,b):
     '''
